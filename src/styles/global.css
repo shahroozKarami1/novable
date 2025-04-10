@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import url(../styles/reset.css);
+@import url(../styles/variable.css);
+@import url(../styles/fonts.css);
+
+*,
+body {
+  font-family: var(--primary-font) !important;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  direction: rtl;
+}
+.TitleSection-landing__mainTitle {
+  position: relative !important;
+  display: block !important;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+}
