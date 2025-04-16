@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import MainImgHeroH from "../../public/image/landingPage/backOfHeroH.png"
 import MainBackImgMemeberShip from "../../public/image/landingPage/memberShip/mainBackG.png"
 import rightSideFormMemberShip from "../../public/image/landingPage/memberShip/rightSideForm.png"
+import MainBackImgPointOfView from '../../public/image/landingPage/PointOfView/backOfPointOfView.png'
 export const CusHeroHeader = styled(Box)({
     backgroundImage: `url(${MainImgHeroH.src})`,
     backgroundPosition: "center",
@@ -76,4 +77,45 @@ export const CusRightSideForm = styled(Box)({
         height: "100%",
         zIndex: -1
     }
+})
+export const WrapperPointOfView = styled(Box)({
+    backgroundImage: `url(${MainBackImgPointOfView.src})`,
+    backgroundSize: "contain",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: "right",
+    marginTop: "5rem ",
+    height: "580px",
+})
+export const PointOfViewCardWrapper = styled(Box)({
+    position: 'relative',
+    marginTop: '5rem ',
+    display: 'flex',
+    boxShadow: "var(--primary-shadow)",
+    flexDirection: "column",
+    justifyContent: 'center',
+    padding: '2rem',
+    
+    backgroundColor: "var(--white-color)",
+    height: "400px",
+    "&:after": {
+        content: `""`,
+        position: 'absolute',
+        display: 'block',
+        height: "100% ",
+        width: "5px",
+        top: 0,
+        right: 0,
+        backgroundColor: "var(--primary-color)",
+
+    }
+})
+export const PointOfviewCardProfile = styled(Box)({
+
+    position: "absolute",
+    top: -80,
+    display : 'block' , 
+    border: "3px  solid  var(--white-color)",
+    borderRadius: "50%", left: 10,
+    boxShadow: "var(--primary-shadow)" , 
+
 })

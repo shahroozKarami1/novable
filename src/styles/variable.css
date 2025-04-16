@@ -4,4 +4,6 @@
   --white-color: #ffffff;
   --dark-color: #242424;
   --primary-font: AzarMehr;
+  --primary-shadow :  rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+

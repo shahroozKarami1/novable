@@ -18,3 +18,9 @@ export interface HIWCardProps {
   disc: string;
   iconImage: string;
 }
+export  interface PointOfViewCardProps {
+    name: string,
+    jobPosition: string,
+    disc: string,
+    profile: string
+}
