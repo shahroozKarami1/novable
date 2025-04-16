@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @import url(../styles/reset.css);
 @import url(../styles/variable.css);
 @import url(../styles/fonts.css);
@@ -17,4 +18,14 @@ body {
   display: block !important;
   font-size: 2rem !important;
   font-weight: bold !important;
+  white-space: nowrap;
+}
+
+.MuiInput-root::after,
+.MuiInput-root::before,
+.Mui-focused,
+.MuiInput-underline,
+.MuiInput-inputAdornedStart,
+.MuiInput-input {
+  border-bottom: unset !important;
 }

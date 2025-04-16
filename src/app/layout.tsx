@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/global.css";
+import 'leaflet/dist/leaflet.css'
 import Layout from "@/components/Layout/Layout";
 
 

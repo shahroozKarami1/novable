@@ -11,3 +11,10 @@ export interface ICallToActionBtnH extends ButtonProps {
   };
   icon: React.ReactNode;
 }
+
+export interface HIWCardProps {
+  title: string;
+  link: string;
+  disc: string;
+  iconImage: string;
+}

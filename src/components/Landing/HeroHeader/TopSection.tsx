@@ -15,7 +15,7 @@ const TopSection: FC<TopSectionProps> = ({ mainTite, subTitle }) => {
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
-                    gap: 2
+                    gap: 2,
 
                 }}>
                     <Typography className='TitleSection-landing__mainTitle'>{mainTite}</Typography>
@@ -25,7 +25,8 @@ const TopSection: FC<TopSectionProps> = ({ mainTite, subTitle }) => {
                     }} />
                     <Typography sx={{
                         lineHeight: 2,
-                        textAlign: "center"
+                        width: '100%',
+                        textAlign: "center",
                     }}>{subTitle}</Typography>
 
                 </Box>
