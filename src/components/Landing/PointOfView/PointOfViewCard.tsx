@@ -3,11 +3,7 @@ import { PointOfViewCardProps } from '@/types/interfaces'
 import { Box, Typography } from '@mui/material'
 import { FC } from 'react'
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-export const PointOfViewTP: FC<{}> = () => {
-    return (
-        <Typography></Typography>
-    )
-}
+
 const PointOfViewCard: FC<PointOfViewCardProps> = ({ disc, jobPosition, name, profile }) => {
     return (
         <PointOfViewCardWrapper  sx={{
