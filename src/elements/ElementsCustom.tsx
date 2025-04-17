@@ -94,7 +94,7 @@ export const PointOfViewCardWrapper = styled(Box)({
     flexDirection: "column",
     justifyContent: 'center',
     padding: '2rem',
-    
+
     backgroundColor: "var(--white-color)",
     height: "400px",
     "&:after": {
@@ -113,9 +113,48 @@ export const PointOfviewCardProfile = styled(Box)({
 
     position: "absolute",
     top: -80,
-    display : 'block' , 
+    display: 'block',
     border: "3px  solid  var(--white-color)",
     borderRadius: "50%", left: 10,
-    boxShadow: "var(--primary-shadow)" , 
+    boxShadow: "var(--primary-shadow)",
+
+})
+export const CusTeamMemberCard = styled(Box)({
+    cursor: "pointer",
+    overflow: 'hidden',
+    position: 'relative',
+    ":hover .overlay": {
+        transform: "translate(-50%, -50%) scale(1)",
+        opacity: 1
+    }
+
+})
+export const CusTeamMemberCardOverLay = styled(Box)({
+
+    cursor: "pointer",
+    position: "absolute",
+    top: "50%",
+    padding: "0  4rem",
+    left: "50%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    width: '90%',
+    borderRadius: "1rem",
+    height: '90%',
+    backgroundColor: 'var(--primary-color)',
+    color: "var(--white-color)",
+    opacity: 0,
+    transformOrigin: 'center',
+    transform: "translate(-50% ,  -50%) scale(0)",
+    transition: "transform 0.4s ease-in-out, opacity 0.3s ease-in-out",
+    zIndex: 2
+})
+export const OverLaySocialMediaWrapper = styled(Box)({
+    borderTop: "1px solid  var(--white-color)",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
 
 })

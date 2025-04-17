@@ -24,3 +24,13 @@ export  interface PointOfViewCardProps {
     disc: string,
     profile: string
 }
+
+export interface TeamMemberCardProps {
+  cover  :  string  , 
+  cardOverLay :  {
+      name :  string ,  
+      jobPosition :  string  , 
+      disc : string  ,  
+      
+  }
+  }

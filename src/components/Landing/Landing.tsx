@@ -6,6 +6,7 @@ import Membership from './Membership/Membership'
 import MapCliant from './Membership/MapCliant'
 import PointOfView from './PointOfView/PointOfView'
 import AboutUs from './AboutUs/AboutUs'
+import TeamMember from './TeamMembers/TeamMember'
 
 const Landing = () => {
   return (
@@ -14,6 +15,7 @@ const Landing = () => {
       <HowItWorks />
       <AboutUs />
       <PointOfView />
+      <TeamMember/>
       <Membership />
       <MapCliant />
 
