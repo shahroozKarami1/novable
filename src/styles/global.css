@@ -8,6 +8,7 @@
 body {
   font-family: var(--primary-font) !important;
   box-sizing: border-box;
+  transition: all 0.5s ease;
 }
 body {
   overflow-x: hidden;
@@ -28,4 +29,14 @@ body {
 .MuiInput-inputAdornedStart,
 .MuiInput-input {
   border-bottom: unset !important;
+}
+
+.MuiAccordion-root,
+.MuiAccordionSummary-root,
+.MuiAccordionDetails-root {
+  border: unset !important;
+  box-shadow: unset !important;
+  border-radius: unset !important;
+  padding:  unset !important;
+  margin: unset !important;
 }

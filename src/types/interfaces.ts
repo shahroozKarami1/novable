@@ -18,19 +18,26 @@ export interface HIWCardProps {
   disc: string;
   iconImage: string;
 }
-export  interface PointOfViewCardProps {
-    name: string,
-    jobPosition: string,
-    disc: string,
-    profile: string
+export interface PointOfViewCardProps {
+  name: string;
+  jobPosition: string;
+  disc: string;
+  profile: string;
 }
 
 export interface TeamMemberCardProps {
-  cover  :  string  , 
-  cardOverLay :  {
-      name :  string ,  
-      jobPosition :  string  , 
-      disc : string  ,  
-      
-  }
-  }
+  cover: string;
+  cardOverLay: {
+    name: string;
+    jobPosition: string;
+    disc: string;
+  };
+}
+export interface LatestBlogCardProps {
+  cover: string;
+  date: string;
+  title: string;
+  author: string;
+  countComments: number;
+  disc: string;
+}

@@ -7,6 +7,8 @@ import MapCliant from './Membership/MapCliant'
 import PointOfView from './PointOfView/PointOfView'
 import AboutUs from './AboutUs/AboutUs'
 import TeamMember from './TeamMembers/TeamMember'
+import LastestBlog from './LatestBlog/LastestBlog'
+import UsualQus from './UsualQus/UsualQus'
 
 const Landing = () => {
   return (
@@ -14,8 +16,10 @@ const Landing = () => {
       <HeroHeader />
       <HowItWorks />
       <AboutUs />
+      <UsualQus/>
       <PointOfView />
-      <TeamMember/>
+      <TeamMember />
+      <LastestBlog />
       <Membership />
       <MapCliant />
 

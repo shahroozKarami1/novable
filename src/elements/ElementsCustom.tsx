@@ -84,7 +84,6 @@ export const WrapperPointOfView = styled(Box)({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: "right",
     marginTop: "5rem ",
-    height: "580px",
 })
 export const PointOfViewCardWrapper = styled(Box)({
     position: 'relative',
@@ -156,5 +155,17 @@ export const OverLaySocialMediaWrapper = styled(Box)({
     width: "100%",
     display: "flex",
     justifyContent: "center",
+
+})
+export const LatestBlogCardDate = styled(Box)({
+
+    position: 'absolute',
+    backgroundColor: "var(--white-color)",
+    top: "-20px",
+    padding: '0.75rem',
+    borderRadius: "1rem",
+    boxShadow: "var(--primary-shadow)",
+    right: 20,
+
 
 })
