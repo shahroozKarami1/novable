@@ -9,6 +9,7 @@ import AboutUs from './AboutUs/AboutUs'
 import TeamMember from './TeamMembers/TeamMember'
 import LastestBlog from './LatestBlog/LastestBlog'
 import UsualQus from './UsualQus/UsualQus'
+import CounterDetails from './CounterDetails/CounterDetails'
 
 const Landing = () => {
   return (
@@ -16,12 +17,14 @@ const Landing = () => {
       <HeroHeader />
       <HowItWorks />
       <AboutUs />
-      <UsualQus/>
+      <UsualQus />
       <PointOfView />
       <TeamMember />
+      <CounterDetails />
       <LastestBlog />
       <Membership />
       <MapCliant />
+
 
     </Box>
   )

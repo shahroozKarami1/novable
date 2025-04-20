@@ -11,7 +11,7 @@ const AboutUs = () => {
                 mt : "5rem"
             }}>
                 <Grid container spacing={5} >
-                    <Grid size={{ md: 6 }}>
+                    <Grid size={{ md: 6 , xs : 12 }}>
                         <Box sx={{
                             width: "100%",
                             height: "100%"
@@ -24,7 +24,7 @@ const AboutUs = () => {
                             }} />
                         </Box>
                     </Grid>
-                    <Grid size={{ md: 6 }}>
+                    <Grid size={{ md: 6 , xs : 12 }}>
 
                         <AboutUsLeftSection disc='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز' icon={<MiscellaneousServicesIcon />} title="استفاده آسان" />
                         <AboutUsLeftSection disc='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز' icon={<MiscellaneousServicesIcon />} title="استفاده آسان" />

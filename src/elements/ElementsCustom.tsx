@@ -5,13 +5,16 @@ import MainImgHeroH from "../../public/image/landingPage/backOfHeroH.png"
 import MainBackImgMemeberShip from "../../public/image/landingPage/memberShip/mainBackG.png"
 import rightSideFormMemberShip from "../../public/image/landingPage/memberShip/rightSideForm.png"
 import MainBackImgPointOfView from '../../public/image/landingPage/PointOfView/backOfPointOfView.png'
+import MainBackBoxDetails from '../../public/image/landingPage/BoxDetails/backOfBox.jpg'
+import MainBackImgFooter from '../../public/image/landingPage/backOfFooter.jpg'
 export const CusHeroHeader = styled(Box)({
     backgroundImage: `url(${MainImgHeroH.src})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     // backgroundAttachment: "fixed",
     width: "100vw",
-    height: "100%",
+ 
+
 })
 export const CusNavBar = styled(Box)({
     position: 'fixed',
@@ -169,3 +172,98 @@ export const LatestBlogCardDate = styled(Box)({
 
 
 })
+
+export const CusCounterDetails = styled(Box)({
+
+    backgroundImage: `url(${MainBackBoxDetails.src})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: 'no-repeat',
+    position: 'relative',
+    padding: "5rem  0",
+    margin: "5rem  0 ",
+    zIndex: 10,
+    "&:after": {
+        content: `""`,
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        display: 'block',
+        height: "100% ",
+        background: "linear-gradient(to top, rgba(72, 79, 227, .8) 0%, rgba(66, 70, 167, .8) 99%)",
+        width: "100%",
+        zIndex: -1
+    }
+
+})
+
+export const BoxDetailCounterWrapper = styled(Box)({
+
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    position: "relative",
+    gap: "1rem",
+    "&:after": {
+        content: `""`,
+        display: "block",
+        width: '20%',
+        height: '1px',
+        background: "var(--white-color)",
+        position: "absolute",
+        right: 0,
+        top: 100,
+        transform: "rotate(90deg)",
+    }
+})
+
+export const FooterWrapper = styled(Box)({
+    backgroundColor: "var(--primary-color)",
+    backgroundImage: `url(${MainBackImgFooter.src})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: 'no-repeat',
+    display: "block",
+    marginTop: "30rem"
+
+})
+
+export const CusInnerContainerFooter = styled(Box)({
+    padding: "5rem  0",
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: '2rem'
+})
+
+
+export const CustomTopArrow = styled(Box)({
+    position: 'fixed',
+    bottom: 20,
+    backgroundColor: 'var(--primary-color)',
+    right: 20,
+    cursor: 'pointer',
+    fontSize: '2rem',
+    border: '1px solid  var(--white-color)',
+    boxShadow: 'var(--primary-shadow)',
+    zIndex: 1000,
+    borderRadius: '50%',
+    padding: '0.5rem',
+    "& path": {
+        color: 'var(--white-color)',
+    },
+    "&:hover": {
+        backgroundColor: 'var(--secoundry-color)',
+        transform: 'scale(1.1)',
+    }
+})
+
+export const WrapperBergerMenu = styled(Box)({
+    justifyContent: "flex-end",
+    alignItems: "center",
+    cursor: "pointer",
+    marginRight: "1rem",
+})
+

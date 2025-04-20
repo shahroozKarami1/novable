@@ -20,7 +20,12 @@ const AccordionUsualQus: FC<AccordionUsualQusProps> = ({ dataAccordion }) => {
     };
 
     return (
-        <Box>
+        <Box sx={{
+            margin: {
+                xs: "0 1rem",
+                md: "0"
+            }
+        }}>
             {
                 dataAccordion.map(({ subDisc, title }, index) => {
                     return (
@@ -37,7 +42,7 @@ const AccordionUsualQus: FC<AccordionUsualQusProps> = ({ dataAccordion }) => {
                                     </Box>
                                     <Box>
                                         {
-                                            expanded ?
+                                            expanded === `panel${index}` ?
                                                 <RemoveCircleOutlineIcon sx={{
                                                     fontSize: "1.5rem",
                                                     color: 'var(--primary-color)'

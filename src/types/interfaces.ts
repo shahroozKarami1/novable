@@ -9,6 +9,7 @@ export interface ICallToActionBtnH extends ButtonProps {
     top: string;
     Bottom: string;
   };
+  isDarkTextBtn?: boolean;
   icon: React.ReactNode;
 }
 

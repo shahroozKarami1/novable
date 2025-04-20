@@ -3,22 +3,24 @@ import { Box, Button, Typography } from '@mui/material'
 import React, { FC } from 'react'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import AndroidIcon from '@mui/icons-material/Android';
-export const BtnCallToAction: FC<ICallToActionBtnH> = ({ icon, innerText, sx }) => {
+export const BtnCallToAction: FC<ICallToActionBtnH> = ({ icon, innerText, isDarkTextBtn, sx }) => {
     return (
         <Button sx={{
+            boxShadow: 'var(--primary-shadow)',
             borderRadius: "999px",
+            backgroundColor: isDarkTextBtn ? "var(--white-color)" : "var(--primary-color)",
             width: "150px",
             padding: "0.75rem",
             ...sx
         }}>
-            <Typography>{icon}</Typography>
+            <Typography  >{icon}</Typography>
             ‌ <Box sx={{ display: 'flex', alignItems: "flex-start", gap: 0.5, flexDirection: 'column', mr: '1rem' }}>
                 <Typography sx={{
-                    color: "var(--dark-color)",
+                    color: isDarkTextBtn ? "var(--dark-color)" : "var(--white-color)",
                     fontSize: "0.60rem"
                 }}>{innerText.top}</Typography>
                 <Typography sx={{
-                    color: "var(--dark-color)",
+                    color: isDarkTextBtn ? "var(--dark-color)" : "var(--white-color)",
                     fontWeight: "bold"
                 }}>{innerText.Bottom}</Typography>
             </Box>
@@ -43,9 +45,16 @@ const RightSide = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: "flex-start",
+            padding: {
+                xs: " 7rem  1rem",
+                md: "0"
+            }
         }}>
 
-            <TextRightSide innerText='خوش آمدید' sx={{ fontSize: "2.8rem" }} />
+            <TextRightSide innerText='خوش آمدید' sx={{ fontSize: {
+                xs: "1.5rem",
+                md: "2.8rem"
+            } }} />
             <TextRightSide innerText='وب سایت نوابیل' sx={{
                 fontSize: '4rem',
                 fontWeight: "bold",
@@ -63,13 +72,11 @@ const RightSide = () => {
                 gap: 2,
                 mt: '2rem'
             }}>
-                <BtnCallToAction sx={{
-                    backgroundColor: 'var(--white-color)'
-                }} icon={<PhoneIphoneIcon />} innerText={{ Bottom: "اپل استور", top: "دریافت از" }} />
-                <BtnCallToAction sx={{
+                <BtnCallToAction isDarkTextBtn ={true} icon={<PhoneIphoneIcon />} innerText={{ Bottom: "اپل استور", top: "دریافت از" }} />
+                <BtnCallToAction isDarkTextBtn ={false} sx={{
                     border: '1px  solid var(--white-color)'
                 }} icon={<AndroidIcon sx={{
-                    color : 'var(--white-color)'
+                        color: 'var(--white-color)'
                 }} />} innerText={{ Bottom: "گوگل پلی", top: "دریافت از" }} />
             </Box>
         </Box>

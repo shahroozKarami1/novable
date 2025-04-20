@@ -1,8 +1,9 @@
 "use client"
-import { CusNavBar } from '@/elements/ElementsCustom'
+import { CusNavBar, WrapperBergerMenu } from '@/elements/ElementsCustom'
 import { Box, Button, Container, Grid, List, ListItem } from '@mui/material'
 import Link from 'next/link'
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
+import MenuIcon from '@mui/icons-material/Menu';
 const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText, link }) => {
   return (
     <ListItem sx={{
@@ -29,13 +30,28 @@ const NavBar = () => {
 
       <CusNavBar>
         <Container>
-          <Grid container>
+          <Grid container sx={{
+            justifyContent: { xs: "space-between", md: "flex-end" }
+          }}>
             <Grid size={{ md: 2 }}>
               <Box >
                 <img src="/image/landingPage/LogoNavBar.png" alt="" />
               </Box>
             </Grid>
-            <Grid size={{ md: 10 }}>
+            <Grid size={{ md: 4 }} sx={{
+              display: { md: "none", xs: "grid" },
+            }}>
+              <WrapperBergerMenu>
+                <MenuIcon sx={{
+                  color: "var(--white-color)",
+                  fontSize: "2.5rem",
+                  border: "3px solid var(--white-color)",
+
+                }} />
+              </WrapperBergerMenu>
+
+            </Grid>
+            <Grid display={{ md: "Grid", xs: "none" }} size={{ md: 10 }}>
               <Box display={"flex"} alignItems={"center"} justifyContent={"flex-end"}>
                 <List sx={{
                   display: "flex",

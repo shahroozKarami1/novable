@@ -25,12 +25,7 @@ const OverLaySocialMedai: FC<{ children: React.ReactNode }> = ({ children }) => 
 const TeamMemberCard: FC<TeamMemberCardProps> = ({ cardOverLay, cover }) => {
     return (
         <CusTeamMemberCard>
-            <Box sx={
-                {
-                    width: "100%",
-                    height: '100%'
-                }
-            }>
+            <Box >
                 <img src={cover} alt="" style={{
                     objectFit: "cover",
                     height: "100%",
