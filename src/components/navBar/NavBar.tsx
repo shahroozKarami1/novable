@@ -1,35 +1,46 @@
 "use client"
 import { CusNavBar, WrapperBergerMenu } from '@/elements/ElementsCustom'
-import { Box, Button, Container, Grid, List, ListItem } from '@mui/material'
+import { Box, Button, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import Link from 'next/link'
 import React, { FC, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
+import ResponsiveMenu from './ResponsiveMenu'
 
-const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText, link }) => {
-  let [isOpenBergerMenu, setIsOpenBergerMenu] = useState(false)
-  function handleOpenBergerMenu() {
-    setIsOpenBergerMenu(!isOpenBergerMenu)
-  }
+export const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText, link }) => {
+
   return (
     <ListItem sx={{
       width: "80px",
       padding: 0,
       display: "flex",
       justifyContent: 'center',
-      margin: 0
-    }}>
-      <Link href={link} style={{
+      margin: 0,
 
-        color: 'var(--white-color)',
-      }}>
-        {
-          innerText
+    }}>
+      <Typography sx={{
+        "a": {
+          color: "var(--white-color)",
+          fontSize: {
+            xs: "0.85rem",
+            md: "1rem"
+          }
         }
-      </Link>
+      }}>
+        <Link href={link} >
+          {
+            innerText
+          }
+        </Link>
+
+      </Typography>
     </ListItem>
   )
 }
 const NavBar = () => {
+  let [isOpenBergerMenu, setIsOpenBergerMenu] = useState(false)
+  const handleOpenBergerMenu = () => {
+    setIsOpenBergerMenu(!isOpenBergerMenu)
+  }
   return (
     <>
 
@@ -56,6 +67,9 @@ const NavBar = () => {
               </WrapperBergerMenu>
 
             </Grid>
+            {
+              isOpenBergerMenu && <ResponsiveMenu />
+            }
             <Grid display={{ md: "Grid", xs: "none" }} size={{ md: 10 }}>
               <Box display={"flex"} alignItems={"center"} justifyContent={"flex-end"}>
                 <List sx={{

@@ -258,3 +258,32 @@ export const WrapperBergerMenu = styled(IconButton)({
     marginRight: "1rem",
 })
 
+export const CusResponsiveMenu = styled(Box)({
+    position: "absolute",
+    width: "100vh",
+    animation: "slideIn 0.3s ease-out",
+    "@keyframes slideIn": {
+        from: {
+            transform: "translateY(-100%)",
+            opacity: 0
+        },
+        to: {
+            transform: "translateY(0)",
+            opacity: 1
+        }
+    },
+    display: 'block',
+    backgroundColor: "var(--primary-color)",
+    top: "100%",
+    right: 0,
+    padding: "2rem",
+    zIndex: 999,
+    "& a": {
+        color: "var(--white-color)",
+        textDecoration: "none",
+        fontSize: "1.2rem"
+    },
+    "& a:hover": {
+        color: "var(--secoundry-color)"
+    }
+})

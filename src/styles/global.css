@@ -8,7 +8,7 @@
 body {
   font-family: var(--primary-font) !important;
   box-sizing: border-box;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
 }
 body {
   overflow-x: hidden;
@@ -40,3 +40,24 @@ body {
   padding:  unset !important;
   margin: unset !important;
 }
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--white-color);
+  border-radius: 3rem; 
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--secoundry-color);
+  color: var(--white-color);
+}
+
+
