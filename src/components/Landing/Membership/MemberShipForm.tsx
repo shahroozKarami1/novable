@@ -28,7 +28,12 @@ export const RightSideContent: FC<{ title: string, disc: string, isIcon: boolean
 }
 const MemberShipForm = () => {
     return (
-        <MemberShipFormWrapper >
+        <MemberShipFormWrapper sx={{
+            height: {
+                md: "600px",
+                xs: "100%"
+            }
+    }} >
             <Grid container sx={{
                 height: '100%',
 
@@ -48,20 +53,20 @@ const MemberShipForm = () => {
                         height: "100%"
                     }}>
                         <Grid container spacing={4}>
-                            <Grid size={{ md: 6 }}>
+                            <Grid size={{ md: 6, xs: 12 }}>
                                 <MemberShipInputs isTextarea={false} placeholder='نام شما' />
                             </Grid>
-                            <Grid size={{ md: 6 }}>
+                            <Grid size={{ md: 6, xs: 12 }}>
                                 <MemberShipInputs isTextarea={false} placeholder='ایمیل شما' />
                             </Grid>
-                            <Grid size={{ md: 12 }}>
+                            <Grid size={{ md: 12  , xs : 12}}>
                                 <MemberShipInputs isTextarea={false} placeholder='موضوع شما' />
                             </Grid>
-                            <Grid size={{ md: 12 }}>
+                            <Grid size={{ md: 12  , xs : 12}}>
                                 <MemberShipInputs isTextarea={true} placeholder='دیدگاه شما' />
                             </Grid>
                             <Grid size={{ md: 12 }}>
-                                <Button sx={{ backgroundColor: 'var(--primary-color)', color: "var(--white-color)" }}>ارسال اطلاعات</Button>
+                                <Button sx={{ backgroundColor: 'var(--primary-color)', color: "var(--white-color)"  , padding : "1rem" }}>ارسال اطلاعات</Button>
                             </Grid>
                         </Grid>
                     </Box>

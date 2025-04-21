@@ -6,14 +6,17 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const PointOfViewCard: FC<PointOfViewCardProps> = ({ disc, jobPosition, name, profile }) => {
     return (
-        <PointOfViewCardWrapper  sx={{
-            
-        }}>
+        <PointOfViewCardWrapper >
             <PointOfviewCardProfile className='PointOfview__profile' >
                 <img src={profile} alt="" />
             </PointOfviewCardProfile>
             <Box display={"flex"}
-                margin={"0  5rem"}
+                margin={
+                    {
+                        xs: "0 1rem",
+                        md: "0 5rem"
+                    }
+                }
                 justifyContent={"center"}
                 gap={1}
                 alignItems={"center"}

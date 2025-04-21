@@ -56,12 +56,18 @@ const RightSide = () => {
                 md: "2.8rem"
             } }} />
             <TextRightSide innerText='وب سایت نوابیل' sx={{
-                fontSize: '4rem',
+                fontSize: {
+                    xs: "3rem",
+                    md: "4rem"
+                },
                 fontWeight: "bold",
             }} />
             <TextRightSide sx={{
                 mt: "1rem",
-                fontSize: "1.1rem",
+                fontSize: {
+                    xs: "1rem",
+                    md: "1.1rem"
+                },
                 lineHeight: '2'
             }} innerText='
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط

@@ -1,5 +1,5 @@
 "use client"
-import { InputAdornment, styled, TextField } from "@mui/material";
+import { IconButton, InputAdornment, styled, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import MainImgHeroH from "../../public/image/landingPage/backOfHeroH.png"
 import MainBackImgMemeberShip from "../../public/image/landingPage/memberShip/mainBackG.png"
@@ -13,7 +13,7 @@ export const CusHeroHeader = styled(Box)({
     backgroundSize: "cover",
     // backgroundAttachment: "fixed",
     width: "100vw",
- 
+
 
 })
 export const CusNavBar = styled(Box)({
@@ -31,7 +31,6 @@ export const MemberShipWrapper = styled(Box)({
     backgroundPosition: "center",
     backgroundSize: "cover",
     marginTop: "4rem",
-    height: "600px"
 })
 export const CusInputAdornmentMemberShip = styled(InputAdornment)({
     backgroundColor: "var(--primary-color)",
@@ -91,6 +90,7 @@ export const WrapperPointOfView = styled(Box)({
 export const PointOfViewCardWrapper = styled(Box)({
     position: 'relative',
     marginTop: '5rem ',
+    cursor: "pointer",
     display: 'flex',
     boxShadow: "var(--primary-shadow)",
     flexDirection: "column",
@@ -205,17 +205,8 @@ export const BoxDetailCounterWrapper = styled(Box)({
     flexDirection: "column",
     position: "relative",
     gap: "1rem",
-    "&:after": {
-        content: `""`,
-        display: "block",
-        width: '20%',
-        height: '1px',
-        background: "var(--white-color)",
-        position: "absolute",
-        right: 0,
-        top: 100,
-        transform: "rotate(90deg)",
-    }
+
+
 })
 
 export const FooterWrapper = styled(Box)({
@@ -260,7 +251,7 @@ export const CustomTopArrow = styled(Box)({
     }
 })
 
-export const WrapperBergerMenu = styled(Box)({
+export const WrapperBergerMenu = styled(IconButton)({
     justifyContent: "flex-end",
     alignItems: "center",
     cursor: "pointer",

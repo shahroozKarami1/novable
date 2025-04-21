@@ -11,7 +11,22 @@ interface BoxDetailProps {
 
 const BoxDetail: FC<BoxDetailProps> = ({ icon, NumberDetails, subDetail }) => {
     return (
-        <BoxDetailCounterWrapper>
+        <BoxDetailCounterWrapper sx={{
+            "&:after": {
+                content: `""`,
+                display:  {
+                    xs: "none",
+                    md: "block"
+                },
+                width: '20%',
+                height: '1px',
+                background: "var(--white-color)",
+                position: "absolute",
+                right: 0,
+                top: 100,
+                transform: "rotate(90deg)",
+            }
+        }}>
             <IconButton sx={{
                 "& svg": {
                     fontSize: "4rem",
@@ -19,11 +34,11 @@ const BoxDetail: FC<BoxDetailProps> = ({ icon, NumberDetails, subDetail }) => {
 
                 }
             }}>{icon}</IconButton>
-    
-                <CountUpComponent  sx={{
-                    fontSize : '2rem' ,  
-                    color : 'var(--white-color)'
-                }}  endNumber={NumberDetails} />
+
+            <CountUpComponent sx={{
+                fontSize: '2rem',
+                color: 'var(--white-color)'
+            }} endNumber={NumberDetails} />
 
             <Typography sx={{
                 fontSize: "1.2rem",

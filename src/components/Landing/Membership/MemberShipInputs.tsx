@@ -16,7 +16,7 @@ const MemberShipInputs: FC<MemberShipInputsProps> = ({ isTextarea, placeholder }
                     <TextareaAutosize
                         minRows={3}
                         placeholder={placeholder}
-                        style={{ width: "100%" , height : "50px"  ,  padding : "1rem"}}
+                        style={{ width: "100%" , height : "50px"  ,  padding : "1rem" ,  border: "1px solid #ccc"}}
                     />
 
             }

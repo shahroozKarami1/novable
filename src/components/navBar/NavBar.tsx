@@ -2,9 +2,14 @@
 import { CusNavBar, WrapperBergerMenu } from '@/elements/ElementsCustom'
 import { Box, Button, Container, Grid, List, ListItem } from '@mui/material'
 import Link from 'next/link'
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
+
 const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText, link }) => {
+  let [isOpenBergerMenu, setIsOpenBergerMenu] = useState(false)
+  function handleOpenBergerMenu() {
+    setIsOpenBergerMenu(!isOpenBergerMenu)
+  }
   return (
     <ListItem sx={{
       width: "80px",
@@ -29,7 +34,7 @@ const NavBar = () => {
     <>
 
       <CusNavBar>
-        <Container>
+        <Container >
           <Grid container sx={{
             justifyContent: { xs: "space-between", md: "flex-end" }
           }}>
@@ -41,7 +46,7 @@ const NavBar = () => {
             <Grid size={{ md: 4 }} sx={{
               display: { md: "none", xs: "grid" },
             }}>
-              <WrapperBergerMenu>
+              <WrapperBergerMenu onClick={handleOpenBergerMenu}>
                 <MenuIcon sx={{
                   color: "var(--white-color)",
                   fontSize: "2.5rem",
