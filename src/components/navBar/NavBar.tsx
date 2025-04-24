@@ -45,8 +45,9 @@ const NavBar = () => {
     <>
 
       <CusNavBar>
-        <Container >
+        <Container  >
           <Grid container sx={{
+            alignItems: "center",
             justifyContent: { xs: "space-between", md: "flex-end" }
           }}>
             <Grid size={{ md: 2 }}>

@@ -8,7 +8,15 @@ const DynamicMap = dynamic(() => import("../../map/mapLeaflat"), {
 
 const MapCliant = () => {
     return (
-        <div>
+        <div style={{
+            position: 'absolute',
+            bottom: "-50%",
+            right: 0,
+            zIndex: -1,
+            width: '100%',
+            padding : "5rem 0" ,  
+            height: '1000px' , 
+        }}>
             <DynamicMap />
 
         </div>

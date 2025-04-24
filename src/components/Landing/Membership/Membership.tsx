@@ -1,9 +1,10 @@
 import { CusInputAdornmentMemberShip, CusTextFeildMemeberShipEmail, MemberShipWrapper } from '@/elements/ElementsCustom'
-import { Box, Container, Grid } from '@mui/material'
+import { Box, Button, Container, Grid } from '@mui/material'
 import React from 'react'
 import TopSection from '../HeroHeader/TopSection'
 import TelegramIcon from '@mui/icons-material/Telegram';
 import MemberShipForm from './MemberShipForm';
+import MapCliant from './MapCliant';
 
 const Membership = () => {
     return (
@@ -33,13 +34,15 @@ const Membership = () => {
                         </Box>
                     </Grid>
                     <Grid size={{ md: 12, xs: 12 }}>
-                        <Box>
+                        <Button type="submit" >
                             <MemberShipForm />
 
-                        </Box>
+                        </Button>
                     </Grid>
                 </Grid>
             </Container>
+            <MapCliant />
+
         </MemberShipWrapper>
     )
 }

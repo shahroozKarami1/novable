@@ -23,14 +23,18 @@ export const CusNavBar = styled(Box)({
     backgroundColor: 'var(--primary-color)',
     display: 'block',
     padding: '1.5rem 0',
-    zIndex: 1000,
+    zIndex: 900,
     // boxShadow: '0 2px 10px rgba(0,0,0,0.1)' 
 })
 export const MemberShipWrapper = styled(Box)({
     backgroundImage: `url(${MainBackImgMemeberShip.src})`,
     backgroundPosition: "center",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     marginTop: "4rem",
+    position: "relative",
+    height: "1050px",
+    display: "block",
+    overflow: "hidden"
 })
 export const CusInputAdornmentMemberShip = styled(InputAdornment)({
     backgroundColor: "var(--primary-color)",
@@ -50,19 +54,20 @@ export const MemberShipFormWrapper = styled(Box)({
     boxShadow: "-2px 1px 35px -15px rgba(0,0,0,0.75)",
     backgroundColor: "var(--white-color)",
     zIndex: 99,
-    display: "block", position: 'relative'
-    // height: '600px',
+    display: "block"
+    , position: 'relative',
 
-    // overflow: "hidden"
+    overflow: "hidden"
 })
 export const CusRightSideForm = styled(Box)({
     backgroundImage: `url(${rightSideFormMemberShip.src})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
-    padding: '3rem',
-
-    display: "block",
+    padding: '3rem', 
+    flexDirection  :"column" ,  
+    // justifyContent : "center" ,  
+    display: "flex",
     color: 'var(--white-color)',
     height: "100%",
     width: '100%',
@@ -216,7 +221,6 @@ export const FooterWrapper = styled(Box)({
     backgroundPosition: "center",
     backgroundRepeat: 'no-repeat',
     display: "block",
-    marginTop: "30rem"
 
 })
 

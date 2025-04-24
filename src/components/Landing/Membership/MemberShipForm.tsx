@@ -1,13 +1,14 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import React, { FC } from 'react'
-import MemberShipInputs from './MemberShipInputs'
 import { CusRightSideForm, MemberShipFormWrapper } from '@/elements/ElementsCustom'
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
 import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
+
+import MemberShipFormValidation from './MemberShipFormValidation';
 export const RightSideContent: FC<{ title: string, disc: string, isIcon: boolean, icon?: React.ReactNode }> = ({ disc, title, isIcon, icon }) => {
     return (
-        <Box display={"flex"} alignItems={"flex-start"} mb={"1.5rem"} gap={1}>
+        <Box display={"flex"} alignItems={"center"} mb={"1.5rem"} gap={1}>
 
             <Box>
                 {isIcon && (<Typography sx={{
@@ -27,13 +28,14 @@ export const RightSideContent: FC<{ title: string, disc: string, isIcon: boolean
     )
 }
 const MemberShipForm = () => {
+
     return (
         <MemberShipFormWrapper sx={{
-            height: {
-                md: "600px",
+            minHeight: {
+                md: "500px",
                 xs: "100%"
             }
-    }} >
+        }} >
             <Grid container sx={{
                 height: '100%',
 
@@ -52,27 +54,11 @@ const MemberShipForm = () => {
                         padding: '3rem',
                         height: "100%"
                     }}>
-                        <Grid container spacing={4}>
-                            <Grid size={{ md: 6, xs: 12 }}>
-                                <MemberShipInputs isTextarea={false} placeholder='نام شما' />
-                            </Grid>
-                            <Grid size={{ md: 6, xs: 12 }}>
-                                <MemberShipInputs isTextarea={false} placeholder='ایمیل شما' />
-                            </Grid>
-                            <Grid size={{ md: 12  , xs : 12}}>
-                                <MemberShipInputs isTextarea={false} placeholder='موضوع شما' />
-                            </Grid>
-                            <Grid size={{ md: 12  , xs : 12}}>
-                                <MemberShipInputs isTextarea={true} placeholder='دیدگاه شما' />
-                            </Grid>
-                            <Grid size={{ md: 12 }}>
-                                <Button sx={{ backgroundColor: 'var(--primary-color)', color: "var(--white-color)"  , padding : "1rem" }}>ارسال اطلاعات</Button>
-                            </Grid>
-                        </Grid>
+                        <MemberShipFormValidation />
                     </Box>
                 </Grid>
             </Grid>
-            
+
         </MemberShipFormWrapper>
     )
 }

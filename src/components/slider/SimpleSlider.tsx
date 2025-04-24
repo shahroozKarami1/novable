@@ -9,7 +9,7 @@ interface SimpleSliderProps {
 }
 
 const SimpleSlider: FC<SimpleSliderProps> = ({ children, numberShowSlider }) => {
-    var settings = {
+    let settings = {
         dots: true,
         infinite: true,
         speed: 500,

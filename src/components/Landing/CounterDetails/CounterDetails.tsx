@@ -1,5 +1,5 @@
 import { CusCounterDetails } from '@/elements/ElementsCustom'
-import { Box, Container, Grid } from '@mui/material'
+import { Container, Grid } from '@mui/material'
 import React from 'react'
 import BoxDetail from './BoxDetail'
 import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';

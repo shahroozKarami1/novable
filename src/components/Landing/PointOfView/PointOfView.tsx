@@ -1,5 +1,5 @@
 import { WrapperPointOfView } from '@/elements/ElementsCustom'
-import { Box, Container, Grid } from '@mui/material'
+import { Box, Container } from '@mui/material'
 import React from 'react'
 import TopSection from '../HeroHeader/TopSection'
 import PointOfViewCard from './PointOfViewCard'
