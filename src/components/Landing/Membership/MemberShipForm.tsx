@@ -15,14 +15,16 @@ export const RightSideContent: FC<{ title: string, disc: string, isIcon: boolean
                     fontSize: '1.3rem',
                 }} > {icon}</Typography>)}
             </Box>
-            <Box display={"flex"} flexDirection={"column"} justifyContent={"flex-start"} gap={1}>
+            <Box display={"flex"} flexDirection={"column"} justifyContent={"flex-start"} alignItems={"flex-start"} gap={1}>
 
 
                 <Typography sx={{
                     fontSize: "1.2rem",
                     fontWeight: 'bold'
                 }}>{title}</Typography>
-                <Typography lineHeight={2} fontSize={"0.90rem"}>{disc}</Typography>
+                <Typography lineHeight={2} fontSize={"0.90rem"} sx={{
+                    textAlign: 'start'
+                }}>{disc}</Typography>
             </Box>
         </Box>
     )

@@ -8,7 +8,13 @@ import MapCliant from './MapCliant';
 
 const Membership = () => {
     return (
-        <MemberShipWrapper>
+        <MemberShipWrapper sx={{
+            height: {
+                xs: "100%",
+                md: "1050px",
+
+            }
+        }}>
             <Container>
                 <Grid container justifyContent={"center"} alignItems={"center"}>
                     <TopSection mainTite='عضویت در خبرنامه'
@@ -34,10 +40,7 @@ const Membership = () => {
                         </Box>
                     </Grid>
                     <Grid size={{ md: 12, xs: 12 }}>
-                        <Button type="submit" >
-                            <MemberShipForm />
-
-                        </Button>
+                        <MemberShipForm />
                     </Grid>
                 </Grid>
             </Container>

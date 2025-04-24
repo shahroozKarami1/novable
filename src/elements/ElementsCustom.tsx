@@ -32,7 +32,6 @@ export const MemberShipWrapper = styled(Box)({
     backgroundSize: "contain",
     marginTop: "4rem",
     position: "relative",
-    height: "1050px",
     display: "block",
     overflow: "hidden"
 })
@@ -54,9 +53,9 @@ export const MemberShipFormWrapper = styled(Box)({
     boxShadow: "-2px 1px 35px -15px rgba(0,0,0,0.75)",
     backgroundColor: "var(--white-color)",
     zIndex: 99,
-    display: "block"
-    , position: 'relative',
-
+    display: "flex",
+    justifyContent: 'flex-start',
+    position: 'relative',
     overflow: "hidden"
 })
 export const CusRightSideForm = styled(Box)({
@@ -64,9 +63,10 @@ export const CusRightSideForm = styled(Box)({
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
-    padding: '3rem', 
-    flexDirection  :"column" ,  
-    // justifyContent : "center" ,  
+    padding: '3rem',
+    flexDirection: "column",
+    alignItems: 'flex-start',
+    // justifyContent: "center",
     display: "flex",
     color: 'var(--white-color)',
     height: "100%",

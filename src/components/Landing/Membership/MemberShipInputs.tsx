@@ -2,7 +2,6 @@ import { TextareaAutosize, TextField, TextFieldProps } from '@mui/material'
 import { FC } from 'react'
 
 type MemberShipInputsProps = {
-    placeholder: string
     isTextarea: boolean
 } & TextFieldProps
 
@@ -18,6 +17,7 @@ const MemberShipInputs: FC<MemberShipInputsProps> = ({ isTextarea, placeholder, 
                         onChange={onChange}
                         onBlur={onBlur}
                         minRows={3}
+
                         placeholder={placeholder}
                         style={{ width: "100%", height: "50px", padding: "1rem", border: "1px solid #ccc" }}
                     />

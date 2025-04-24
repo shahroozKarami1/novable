@@ -66,7 +66,8 @@ const MemberShipFormValidation = () => {
                                 <Button
                                     type='submit'
                                     disabled={isSubmitting}
-                                    sx={{ backgroundColor: 'var(--primary-color)', color: "var(--white-color)", padding: "1rem" }}>ارسال اطلاعات</Button>
+                                    sx={{ backgroundColor: 'var(--primary-color)', color: "var(--white-color)", padding: "1rem" }}>ارسال
+                                </Button>
                             </Grid>
                         </Grid>
 
