@@ -1,6 +1,6 @@
 "use client"
-import { IconButton, InputAdornment, styled, TextField } from "@mui/material";
-import { Box } from "@mui/system";
+import { Button, IconButton, InputAdornment, styled, TextField } from "@mui/material";
+import { Box, fontSize } from "@mui/system";
 import MainImgHeroH from "../../public/image/landingPage/backOfHeroH.png"
 import MainBackImgMemeberShip from "../../public/image/landingPage/memberShip/mainBackG.png"
 import rightSideFormMemberShip from "../../public/image/landingPage/memberShip/rightSideForm.png"
@@ -291,3 +291,30 @@ export const CusResponsiveMenu = styled(Box)({
         color: "var(--secoundry-color)"
     }
 })
+export const WrapperDialog = styled(Box)({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "500px",
+    padding: "2rem",
+    gap: "1rem",
+    minHeight: "400px",
+    backgroundColor: "var(--white-color)",
+})
+
+export const CusBtnLoginSubmit = styled(Button)({
+    backgroundColor: 'var(--primary-color)',
+    color: 'var(--white-color)',
+    padding: '1rem',
+    borderRadius: "10px",
+    width: "100%",
+    height: "50px",
+    fontSize: "1rem",
+    "&:hover": {
+        transition: 'all 0.3s ease-in-out',
+        backgroundColor: 'var(--secoundry-color)',
+        color : 'var(--dark-color)'
+    }
+})
+

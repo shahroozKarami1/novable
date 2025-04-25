@@ -9,4 +9,11 @@ let YupValidation = yup.object().shape({
     comment: yup.string().required("دیدگاه خود را وارد کنید..."),
 })
 
-export default YupValidation;
+let YupValidationLogin = yup.object().shape({
+    username: yup.string().required("نام کاربری خود را وارد کنید..."),
+    password: yup.string().required("کلمه عبور خود را وارد کنید..."),
+})
+
+export { YupValidation, YupValidationLogin };
+
+

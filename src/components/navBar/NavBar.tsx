@@ -5,7 +5,8 @@ import Link from 'next/link'
 import React, { FC, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import ResponsiveMenu from './ResponsiveMenu'
-
+import LoginDialog from '../Landing/LoginDialog/LoginDialog'
+import Cookies from 'js-cookie'
 export const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText, link }) => {
 
   return (
@@ -23,6 +24,10 @@ export const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText
           fontSize: {
             xs: "0.85rem",
             md: "1rem"
+          },
+          "&:hover": {
+            color: "var(--secoundry-color)",
+            transition: 'all 0.3s ease-in-out',
           }
         }
       }}>
@@ -41,6 +46,17 @@ const NavBar = () => {
   const handleOpenBergerMenu = () => {
     setIsOpenBergerMenu(!isOpenBergerMenu)
   }
+  let [isOpenLoginDialog, setIsOpenLoginDialog] = useState(false)
+  const handleOpenLoginDialog = () => {
+    setIsOpenLoginDialog(!isOpenLoginDialog)
+  }
+  const handlerScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+  let token = Cookies.get("token")
   return (
     <>
 
@@ -51,9 +67,9 @@ const NavBar = () => {
             justifyContent: { xs: "space-between", md: "flex-end" }
           }}>
             <Grid size={{ md: 2 }}>
-              <Box >
+              <Link href="/" onClick={handlerScrollToTop}>
                 <img src="/image/landingPage/LogoNavBar.png" alt="" />
-              </Box>
+              </Link>
             </Grid>
             <Grid size={{ md: 4 }} sx={{
               display: { md: "none", xs: "grid" },
@@ -86,11 +102,22 @@ const NavBar = () => {
                   <NavBarLinks innerText='بلاگ' link='/' />
                   <NavBarLinks innerText='تماس' link='/' />
                 </List>
-                <Button sx={{
-                  border: "1px  solid  var(--white-color)",
-                  color: "var(--white-color)",
-                  padding: " 0.5rem 2rem"
-                }}>شروع  کنید</Button>
+                {
+                  !token ? <Button
+                    onClick={handleOpenLoginDialog}
+                    sx={{
+                      border: "1px  solid  var(--white-color)",
+                      color: "var(--white-color)",
+                      padding: " 0.5rem 2rem"
+                    }}>شروع  کنید</Button> :
+                    <Button
+                      sx={{
+                        border: "1px  solid  var(--white-color)",
+                        color: "var(--white-color)",
+                        padding: " 0.5rem 2rem"
+                      }}>شهروز کرمی </Button>
+                }
+
               </Box>
             </Grid>
           </Grid>
@@ -98,6 +125,9 @@ const NavBar = () => {
 
 
       </CusNavBar>
+      {
+        isOpenLoginDialog && <LoginDialog open={isOpenLoginDialog} handleCloseDiollog={handleOpenLoginDialog} />
+      }
     </>
   )
 }

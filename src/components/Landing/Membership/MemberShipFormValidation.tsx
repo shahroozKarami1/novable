@@ -1,7 +1,7 @@
 "use client"
 import React, { FC, useState } from 'react'
 import { Formik, Form } from 'formik';
-import YupValidation from '@/validation/YupValidation';
+import { YupValidation } from '@/validation/YupValidation';
 import MemberShipInputs from './MemberShipInputs';
 import { Button, Grid, Snackbar, Typography } from '@mui/material';
 import { postData } from '@/services/apiServices';
@@ -34,7 +34,7 @@ const MemberShipFormValidation = () => {
         <>
             <Formik initialValues={initialValues} validationSchema={YupValidation}
                 onSubmit={async (values, { resetForm }) => {
-                    const response = await postData<any>("/membershipComments", values)
+                    const response = await postData("/membershipComments", values)
                     console.log(response)
                     if (response.status == 201) {
                         setOpen(true);

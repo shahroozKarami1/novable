@@ -4,6 +4,16 @@ interface ApiError {
   message: string;
   status: number;
 }
+export interface LoginCredentials {
+  username: string;
+  password: string;
+}
+
+export interface LoginResponse {
+  success: boolean;
+  token?: string;
+  message?: string;
+}
 
 const apiClient = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
@@ -12,7 +22,7 @@ const apiClient = axios.create({
   },
 });
 
-export async function fetchData<T>(endpoint: string, params?: object) {
+export async function fetchData(endpoint: string, params?: object) {
   try {
     const response: AxiosResponse = await apiClient.get(endpoint, { params });
     return response;
@@ -22,7 +32,7 @@ export async function fetchData<T>(endpoint: string, params?: object) {
   }
 }
 
-export async function postData<T>(endpoint: string, data: object) {
+export async function postData(endpoint: string, data: object) {
   try {
     const response: AxiosResponse = await apiClient.post(endpoint, data);
     return response;
@@ -43,4 +53,26 @@ function handleApiError(error: AxiosError): ApiError {
     message: error.message || "Network error",
     status: 500,
   };
+}
+
+export async function loginUser(
+  credentials: LoginCredentials
+): Promise<LoginResponse> {
+  try {
+    const response: AxiosResponse = await apiClient.post(
+      "/auth/login",
+      credentials
+    );
+    return {
+      success: true,
+      token: response.data.token,
+      message: "Login successful",
+    };
+  } catch (error) {
+    const apiError = handleApiError(error as AxiosError);
+    return {
+      success: false,
+      message: apiError.message,
+    };
+  }
 }
