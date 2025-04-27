@@ -10,7 +10,7 @@ import TeamMember from './TeamMembers/TeamMember'
 import LastestBlog from './LatestBlog/LastestBlog'
 import UsualQus from './UsualQus/UsualQus'
 import CounterDetails from './CounterDetails/CounterDetails'
-
+import ListPrice from './ListPrice/ListPrice'
 const Landing = () => {
   return (
     <Box>
@@ -19,6 +19,7 @@ const Landing = () => {
       <AboutUs />
       <UsualQus />
       <PointOfView />
+      <ListPrice />
       <TeamMember />
       <CounterDetails />
       <LastestBlog />

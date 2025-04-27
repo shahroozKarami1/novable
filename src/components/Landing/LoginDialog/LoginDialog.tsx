@@ -45,12 +45,12 @@ const LoginDialog: FC<LoginDialogProps> = ({ open, handleCloseDiollog }) => {
                             actions.setSubmitting(false)
                             actions.resetForm();
                             if (values.username === "admin" && values.password === "admin") {
-                                if (open) {
-                                    handleCloseDiollog()
-                                }
                                 setIsOpenSubmitSnackBar(true)
-                                // Cookies.set("token", "fhefiwefgigiwfgiwfiewug")
-                                // redirect("/admin")
+                                Cookies.set("token", "fhefiwefgigiwfgiwfiewug")
+                                setTimeout(() => {
+                                    handleCloseDiollog();
+                                    redirect("/admin");
+                                }, 1000);
                             } else {
                                 setIsOpenErrorSnackBar(true)
                             }

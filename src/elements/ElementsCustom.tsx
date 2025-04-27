@@ -318,3 +318,22 @@ export const CusBtnLoginSubmit = styled(Button)({
     }
 })
 
+export const ListPriceWrapper = styled(Box)({
+
+    boxShadow: "var(--primary-shadow)",
+    borderRadius: "10px",
+    backgroundColor: "var(--white-color)",
+    margin: "2rem 0",
+    width: "100%",
+    padding : '  6rem 0 ' ,  
+    
+})
+export const CardListPriceWrapper = styled(Box)({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    borderRight : '1px solid #ccc' ,  
+    // boxShadow: "var(--primary-shadow)",
+})
+

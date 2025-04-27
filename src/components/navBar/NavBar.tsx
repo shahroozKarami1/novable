@@ -2,13 +2,13 @@
 import { CusNavBar, WrapperBergerMenu } from '@/elements/ElementsCustom'
 import { Box, Button, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import Link from 'next/link'
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import ResponsiveMenu from './ResponsiveMenu'
 import LoginDialog from '../Landing/LoginDialog/LoginDialog'
 import Cookies from 'js-cookie'
-export const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText, link }) => {
 
+export const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText, link }) => {
   return (
     <ListItem sx={{
       width: "80px",
@@ -42,6 +42,7 @@ export const NavBarLinks: FC<{ innerText: string, link: string }> = ({ innerText
   )
 }
 const NavBar = () => {
+
   let [isOpenBergerMenu, setIsOpenBergerMenu] = useState(false)
   const handleOpenBergerMenu = () => {
     setIsOpenBergerMenu(!isOpenBergerMenu)
@@ -57,6 +58,8 @@ const NavBar = () => {
     })
   }
   let token = Cookies.get("token")
+
+
   return (
     <>
 
@@ -95,7 +98,7 @@ const NavBar = () => {
                   ml: "2rem"
                 }}>
                   <NavBarLinks innerText='خانه' link='/' />
-                  <NavBarLinks innerText='درباره ما' link='/' />
+                  <NavBarLinks innerText='درباره ما' link='#aboutUs' />
                   <NavBarLinks innerText='ویژگی ها' link='/' />
                   <NavBarLinks innerText='تصاویر' link='/' />
                   <NavBarLinks innerText='قیمت ها' link='/' />

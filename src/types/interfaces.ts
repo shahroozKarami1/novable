@@ -42,3 +42,10 @@ export interface LatestBlogCardProps {
   countComments: number;
   disc: string;
 }
+export interface CardListPriceProps {
+  iconCard :  React.ReactNode | string
+  title: string
+  subTitle: string
+  price: number
+  features: string[]
+}

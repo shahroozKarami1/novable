@@ -1,5 +1,6 @@
 @font-face {
   font-family: AzarMehr;
-  src: url(/fonts/AzarMehr/AzarMehr-Medium.ttf),
+  src: url(/fonts/AzarMehr/AzarMehr-FD-Medium.ttf),
+    url(/fonts/AzarMehr/AzarMehr-Medium.ttf),
     url(/AzarMehr/AzarMehr-ExtraBold.ttf);
 }
